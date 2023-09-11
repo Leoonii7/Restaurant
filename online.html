@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Online</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #444;
+            padding: 10px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #444;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        select {
+            height: 40px;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        input[type="submit"] {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #444;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My Restaurant</h1>
+        <p>Order Delicious Food Online</p>
+    </header>
+    <nav>
+        <!-- Your navigation links -->
+    </nav>
+    <div class="container">
+        <h2>Order Online</h2>
+        <form id="order-form" action="process_order.php" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone:</label>
+            <input type="number" id="phone" name="phone" required>
+
+            <label for="menu-item">Menu Item:</label>
+            <select id="menu-item" name="menu-item" required>
+                <optgroup label="Pizzas">
+                    <option value="margarita-pizza">Margherita Pizza - $12.99</option>
+                    <option value="home-made-pizza">Home Made Pizza - $10.99</option>
+                    <option value="spinach-pizza">Spinach Pizza - $11.99</option>
+                    <option value="broccoli-pizza">Broccoli Pizza - $9.99</option>
+                    <option value="chicken-pizza">Chicken Pizza - $13.99</option>
+                </optgroup>
+                <optgroup label="Salads">
+                    <option value="caesar-salad">Caesar Salad - $8.99</option>
+                    <option value="caprese-salad">Caprese Salad - $8.99</option>
+                    <option value="greek-salad">Greek Salad - $8.99</option>
+                    <option value="cobb-salad">Cobb Salad - $8.99</option>
+                    <option value="waldorf-salad">Waldorf Salad - $8.99</option>
+                </optgroup>
+                <optgroup label="Meats">
+                    <option value="grilled-steak">Grilled Steak - $19.99</option>
+                    <option value="roasted-chicken">Roasted Chicken - $15.99</option>
+                    <option value="bbq-ribs">BBQ Ribs - $17.99</option>
+                </optgroup>
+                <optgroup label="Fish">
+                    <option value="salmon-fillet">Salmon Fillet - $16.99</option>
+                    <option value="tuna-steak">Tuna Steak - $18.99</option>
+                    <option value="sea-bass">Sea Bass - $19.99</option>
+                    <option value="garlic-shrimp">Garlic Shrimp - $15.99</option>
+                    <option value="fish-and-chips">Fish and Chips - $14.99</option>
+                </optgroup>
+                <optgroup label="Drinks">
+                <option value="elegant-cocktail">Elegant Cocktail - $12.99</option>
+                <option value="champagne">Champagne - $19.99</option>
+                <option value="old-fashioned">Old Fashioned - $14.99</option>
+                <option value="negroni">Negroni - $13.99</option>
+                <option value="mineral-water">Mineral Water - $1.99</option>
+                <option value="soda">Soda - $3.49</option>
+                <option value="red-wine">Red Wine - $24.99</option>
+                <option value="white-wine">White Wine - $22.99</option>
+                <option value="rose-wine">Rosé Wine - $23.99</option>
+            </optgroup>
+            </select>
+
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" name="quantity" min="1" required>
+
+            <label for="address">address:</label>
+            <input type="text" id="quantity" name="address" required>
+
+            <label for="additional-instructions">Additional Instructions:</label>
+            <textarea id="additional-instructions" name="additional-instructions" rows="4"></textarea>
+
+            <input type="submit" value="Place Order">
+        </form>
+    </div>
+    <div class="order-summary">
+        <h2>Order Summary</h2>
+        <ul id="selected-items">
+            <!-- Selected items will be displayed here using JavaScript -->
+        </ul>
+    </div>
+    
+   
+  
+    <footer>
+        &copy; 2023 My Restaurant
+    </footer>
+    <script>
+        // JavaScript to display selected items
+        const orderForm = document.getElementById("order-form");
+        const selectedItemsList = document.getElementById("selected-items");
+
+        orderForm.addEventListener("submit", function (e) {
+            e.preventDefault(); // Prevent form submission
+
+            // Get the selected menu item
+            const menuItem = document.getElementById("menu-item");
+            const selectedItem = menuItem.options[menuItem.selectedIndex];
+
+            if (selectedItem.value !== "") {
+                // Create a new list item to display the selected item
+                const listItem = document.createElement("li");
+                listItem.textContent = selectedItem.textContent;
+                selectedItemsList.appendChild(listItem);
+
+                // Clear the form for the next selection
+                menuItem.selectedIndex = 0; // Reset to the default option
+            }
+        });
+    </script>
+</body>
+</html>

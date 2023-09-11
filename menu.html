@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: 'Helvetica', Arial, sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+        }
+
+        .menu-section {
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+        }
+
+        h2 {
+            color: #333;
+            font-size: 1.5em;
+            margin-top: 0;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 20px;
+        }
+
+        .item-name {
+            font-weight: bold;
+            color: #333;
+            font-size: 1.2em;
+        }
+
+        .item-price {
+            float: right;
+            color: #d9534f;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        .item-image {
+            max-width: 100px; /* Adjust the image size as needed */
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+        }
+      
+.restaurant-button {
+    background-color: #DAA520; 
+    color: #fff; 
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 5px;
+    font-size: 18px; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease; 
+ 
+}
+
+/* Hover effect */
+.restaurant-button:hover {
+    background-color: #FFD700; 
+}
+
+    </style>
+</head>
+<body>
+    <h1>Restaurant Menu</h1>
+    
+    <section class="menu-section" id="pizza">
+        <h2>Pizza</h2>
+        <ul>
+            <li>
+                <img class="item-image" src="./dishes/margarita.webp" alt="Margherita Pizza">
+                <span class="item-name">Margherita Pizza</span>
+                <span class="item-price">$12.99</span>
+                <p>Fresh tomato, mozzarella</p>
+            </li>
+            <li>
+                <img class="item-image" src="./dishes/home.jpg" alt="Another Dish 1">
+                <span class="item-name">Home Made Pizza</span>
+                <span class="item-price">$10.99</span>
+                <p>Fresh tomato, mozzarella, mushroom, pepperoni, BBQ sauce </p>
+            </li>
+            
+            <li>
+                <img class="item-image" src="./dishes/spinach.jpg" alt="Another Dish 2">
+                <span class="item-name">Spinach Pizza</span>
+                <span class="item-price">$11.99</span>
+                <p>Spinach, mozzarella, parmesan, creamy ricotta</p>
+            </li>
+            
+            <li>
+                <img class="item-image" src="./dishes/broccoli.jpg" alt="Another Dish 3">
+                <span class="item-name">Broccoli</span>
+                <span class="item-price">$9.99</span>
+                <p>Tomato sauce, cheese, Broccoli</p>
+            </li>
+            
+            <li>
+                <img class="item-image" src="./dishes/chihcken.jpg" alt="Another Dish 4">
+                <span class="item-name">Chicken Pizza</span>
+                <span class="item-price">$13.99</span>
+                <p>Chicken, cheese, tomato sauce</p>
+            </li>
+        </ul>
+    </section>
+
+    <section class="menu-section" id="salads">
+        <h2>Salads</h2>
+        <ul>
+            <li>
+                <img class="item-image" src="./dishes/cesar.jpg" alt="Another Dish 4">
+                <span class="item-name">Caesar Salad</span>
+                <span class="item-price">$8.99</span>
+                <p>Romaine lettuce, croutons, Caesar dressing</p>
+            </li>
+            <li>
+                <img class="item-image" src="./dishes/Caprese.jpg" alt="Another Dish 4">
+                <span class="item-name">Caprese Salad</span>
+                <span class="item-price">$8.99</span>
+                <p>Fresh mozzarella cheese, ripe tomatoes, and fragrant basil leaves, drizzled</p>
+            </li>
+            <li>
+                <img class="item-image" src="./dishes/Greek.webp" alt="Another Dish 4">
+                <span class="item-name">Greek Salad</span>
+                <span class="item-price">$8.99</span>
+                <p>Crisp lettuce, juicy tomatoes, cucumbers, red onions, Kalamata olives, and feta cheese</p>
+            </li>
+            <li>
+                <img class="item-image" src="./dishes/coob.jpg" alt="Another Dish 4">
+                <span class="item-name">Cobb Salad</span>
+                <span class="item-price">$8.99</span>
+                <p>Chopped lettuce, tomatoes, avocados, hard-boiled eggs, crispy bacon, grilled chicken</p>
+            </li>
+            <li>
+                <img class="item-image" src="./dishes/Waldorf.webp" alt="Another Dish 4">
+                <span class="item-name">Waldorf Salad</span>
+                <span class="item-price">$8.99</span>
+                <p>Crisp apples, crunchy celery, juicy grapes, and toasted walnuts</p>
+            </li>
+        </ul>
+    </section>
+
+    <section class="menu-section" id="meats">
+        <h2>Meats</h2>
+        <ul>
+                <li>
+                    <img class="item-image" src="./dishes/Perfect-Grilled-Sirloin-Steak.jpg" alt="Another Dish 4">
+                    <span class="item-name">Grilled Steak</span>
+                    <span class="item-price">$19.99</span>
+                    <p>Prime cut steak, seasoned to perfection</p>
+                </li>
+                <li>
+                    <img class="item-image" src="./dishes/roast-chicken-750x750.webp" alt="Another Dish 4">
+                    <span class="item-name">Roasted Chicken</span>
+                    <span class="item-price">$15.99</span>
+                    <p>Tender roasted chicken with herbs and spices</p>
+                </li>
+                <li>
+                    <img class="item-image" src="./dishes/BBQ-ribs-3.jpg" alt="Another Dish 4">
+                    <span class="item-name">BBQ Ribs</span>
+                    <span class="item-price">$17.99</span>
+                    <p>Slow-cooked BBQ ribs, smothered in sauce</p>
+                </li>
+              
+        </ul>
+
+    </section>
+    <section class="menu-section" id="fish">
+        <h2>Fish</h2>
+        <ul>
+            <li>
+                <img class="item-image" src="./dishes/Flavorful-Salmon-Fillets_EXPS_CF2BZ20_32394_B12_05_4b-3.jpg" alt="Salmon Fillet">
+                <span class="item-name">Salmon Fillet</span>
+                <span class="item-price">$16.99</span>
+                <p>Fresh salmon fillet, grilled to perfection</p>
+            </li>
+            <li>
+                <img class="item-image" src="./dishes/tuna.jpg" alt="Tuna Steak">
+                <span class="item-name">Tuna Steak</span>
+                <span class="item-price">$18.99</span>
+                <p>Seared tuna steak, served with a sesame crust</p>
+            </li>
+            <li>
+                <img class="item-image" src="./dishes/seabass.jpg" alt="Sea Bass">
+                <span class="item-name">Sea Bass</span>
+                <span class="item-price">$19.99</span>
+                <p>Grilled sea bass with lemon and herbs</p>
+            </li>
+            <li>
+                <img class="item-image" src="./dishes/shrimp.jpg" alt="Garlic Shrimp">
+                <span class="item-name">Garlic Shrimp</span>
+                <span class="item-price">$15.99</span>
+                <p>Succulent garlic shrimp sautéed to perfection</p>
+            </li>
+            <li>
+                <img class="item-image" src="./dishes/Fish_and_chips_blackpool.jpg" alt="Fish and Chips">
+                <span class="item-name">Fish and Chips</span>
+                <span class="item-price">$14.99</span>
+                <p>Classic fish and chips with tartar sauce</p>
+            </li>
+        </ul>
+    </section>
+    <section class="menu-section" id="drinks">
+        <h2>Drinks</h2>
+        <ul>
+            <li>
+                <img class="item-image" src="./drinks/water.jpeg" alt="Water">
+                <span class="item-name">Mineral Water</span>
+                <span class="item-price">$2.99</span>
+                <p>Chilled mineral water from pristine sources.</p>
+            </li>
+            <li>
+                <img class="item-image" src="./drinks/Soda.jpg" alt="Soda">
+                <span class="item-name">Soda</span>
+                <span class="item-price">$2.49</span>
+                <p>Refreshing fizzy soda in various flavors.</p>
+            </li>
+             <li>
+                <img class="item-image" src="./drinks/cocktail.jpg" alt="Elegant Cocktail">
+                <span class="item-name">Elegant Cocktail</span>
+                <span class="item-price">$12.99</span>
+                <p>A sophisticated blend of premium <span class="drink-ingredient">gin</span>, fresh <span class="drink-ingredient">lime juice</span>, and a touch of <span class="drink-ingredient">elderflower liqueur</span>. Served in a chilled martini glass.</p>
+            </li>
+            <li>
+                <img class="item-image" src="./drinks/champagne.jpg" alt="Champagne">
+                <span class="item-name">Champagne</span>
+                <span class="item-price">$19.99</span>
+                <p>Exquisite Champagne for celebrating special moments.</p>
+            </li>
+            <li>
+                <img class="item-image" src="./drinks/old.jpg" alt="Old Fashioned">
+                <span class="item-name">Old Fashioned</span>
+                <span class="item-price">$14.99</span>
+                <p>A timeless bourbon cocktail with sugar, bitters, and a twist of orange peel.</p>
+            </li>
+            <li>
+                <img class="item-image" src="./drinks/negroni.jpg" alt="Negroni">
+                <span class="item-name">Negroni</span>
+                <span class="item-price">$13.99</span>
+                <p>A classic Italian cocktail featuring gin, Campari, and sweet vermouth.</p>
+            </li>
+            <li>
+                <img class="item-image" src="./drinks/red-wine-types.jpg" alt="Red Wine">
+                <span class="item-name">Red Wine</span>
+                <span class="item-price">$24.99</span>
+                <p>A rich and full-bodied red wine with notes of dark fruit and oak.</p>
+            </li>
+            <li>
+                <img class="item-image" src="./drinks/220px-White_Wine_Glas.jpg" alt="White Wine">
+                <span class="item-name">White Wine</span>
+                <span class="item-price">$22.99</span>
+                <p>A crisp and refreshing white wine with hints of citrus and green apple.</p>
+            </li>
+            <li>
+                <img class="item-image" src="./drinks/rose.jpg" alt="Rosé Wine">
+                <span class="item-name">Rosé Wine</span>
+                <span class="item-price">$23.99</span>
+                <p>A delightful rosé wine with a balance of red fruit flavors and floral notes.</p>
+            </li>
+                        
+        </ul>
+    </section>
+    <button class="restaurant-button"><a href="online.html">Order online</a></button>
+
+
+    
+</body>
+</html>
